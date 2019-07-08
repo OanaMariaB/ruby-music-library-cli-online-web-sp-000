@@ -18,6 +18,11 @@ class MusicLibraryController
     puts "What would you like to do?"
 
     input = gets.strip
+
+    case input
+    when "list songs"
+      list_songs
+    end
     end
   end
 
@@ -69,11 +74,6 @@ class MusicLibraryController
      song = array[input-1]
      puts "Playing #{song.name} by #{song.artist.name}"
    end
-  end
-
-  case input
-  when "list songs"
-    list_songs
   end
 
 end
